@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="cadastroUsuario.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1> Cadastrar </h1>
+            <div class="label-float">
+                <input type="text" id="nome" placeholder="" required>
+                <label for="nome">Nome</label>
+            </div>
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder="" required>
+                <label for="usuario">Usuario</label>
+            </div>
+            <div class="label-float">
+                <input type="password" id="senha" placeholder="" required>
+                <label for="senha">Senha</label>
+                <img src="eye-regular.svg" class="fa-eye" id="eye1">        
+                <script type="text/javascript" src="mostrarSenha.js"></script> 
+            </div>
+            <div class="label-float">
+                <input type="password" id="confirmarSenha" placeholder="" required>
+                <label for="confirmarSenha">Confirmar Senha</label>
+                <img src="eye-regular.svg" class="fa-eye2" id="eye2"/>        
+                <script type="text/javascript" src="mostrarConfirmarSenha.js"></script> 
+            </div>
+            <div class="justify-center">
+                <button>Cadastrar</button>
+            </div>
+            <p>
+                <a href="index.html">Voltar</a>
+            </p>
+        </div>
+
+    </div>  
+</body>
+</html>
