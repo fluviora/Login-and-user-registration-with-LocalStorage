@@ -5,41 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link href="cadastroUsuario.css" rel="stylesheet">
-    
+    <link href="cadastroUsuario.css" rel="stylesheet">    
 </head>
 <body>
+    
     <div class="container">
         <div class="card">
             <h1> Cadastrar </h1>
+            <div id="msgError"></div>
+            <div id="msgSucess"></div>
             <div class="label-float">
                 <input type="text" id="nome" placeholder="" required>
-                <label for="nome">Nome</label>
+                <label id="labelNome" for="nome">Nome</label>           
             </div>
             <div class="label-float">
                 <input type="text" id="usuario" placeholder="" required>
-                <label for="usuario">Usuario</label>
+                <label id="labelUsuario" for="usuario">Usuario</label>
             </div>
             <div class="label-float">
                 <input type="password" id="senha" placeholder="" required>
-                <label for="senha">Senha</label>
-                <img src="eye-regular.svg" class="fa-eye" id="eye1">        
-                <script type="text/javascript" src="mostrarSenha.js"></script> 
+                <label id="labelSenha" for="senha">Senha</label>
+                <img src="eye-regular.svg" class="fa-eye" id="eye1">                     
             </div>
             <div class="label-float">
                 <input type="password" id="confirmarSenha" placeholder="" required>
-                <label for="confirmarSenha">Confirmar Senha</label>
-                <img src="eye-regular.svg" class="fa-eye2" id="eye2"/>        
-                <script type="text/javascript" src="mostrarConfirmarSenha.js"></script> 
+                <label id="labelConfimarSenha" for="confirmarSenha">Confirmar Senha</label>
+                <img src="eye-regular.svg" class="fa-eye2" id="eye2"/>     
             </div>
             <div class="justify-center">
-                <button>Cadastrar</button>
+                <button onclick="cadastrar()">Cadastrar</button>                
             </div>
             <p>
                 <a href="index.html">Voltar</a>
             </p>
         </div>
-
+        <script type="text/javascript" src="mostrarSenha.js"></script>
+        <script type="text/javascript" src="cadastrar.js"></script>
+        <script type="text/javascript" src="mostrarConfirmarSenha.js"></script>
     </div>  
 </body>
 </html>
