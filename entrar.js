@@ -1,4 +1,4 @@
-function entrar() {
+function entrar() {     
     let usuario = document.querySelector('#usuario')
     let userLabel = document.querySelector('#userLabel')
 
@@ -15,7 +15,7 @@ function entrar() {
     }
 
     listaUser = JSON.parse(localStorage.getItem('listaUser'))
-    console.log(listaUser)
+    
     listaUser.forEach((item) => {
        
         if(usuario.value == item.userCad && senha.value == item.senhaCad){
@@ -29,14 +29,24 @@ function entrar() {
         }                   
     })
 
-    if(usuario.value == userValid.user && senha.value == userValid.senha){
-        window.location.href = 'aftersignin.html'
+    if(usuario.value !=='' && senha.value !==''){
+        if(usuario.value == userValid.user && senha.value == userValid.senha ){
+            window.location.href = 'aftersignin.html'
 
-        let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
-        localStorage.setItem('token', token)
-        console.log(token)
+            let token = Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2)
+            localStorage.setItem('token', token)
+            console.log(token)
 
-        localStorage.setItem('userLogado', JSON.stringify(userValid))
+            localStorage.setItem('userLogado', JSON.stringify(userValid))
+        } else{
+            userLabel.setAttribute('style', 'color: red')
+            usuario.setAttribute('style', 'border-color: red')
+            senhaLable.setAttribute('style', 'color: red')
+            senha.setAttribute('style', 'border-color: red')
+            msgError.setAttribute('style', 'display: block')
+            msgError.innerHTML = 'Usuário ou senha incorretos'
+            usuario.focus()
+        }       
 
     } else{
         userLabel.setAttribute('style', 'color: red')
@@ -44,7 +54,7 @@ function entrar() {
         senhaLable.setAttribute('style', 'color: red')
         senha.setAttribute('style', 'border-color: red')
         msgError.setAttribute('style', 'display: block')
-        msgError.innerHTML = 'Usuário ou senha incorretos'
+        msgError.innerHTML = 'Digite nos campos os dados corretos'
         usuario.focus()
     }
 }

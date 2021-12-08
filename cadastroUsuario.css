@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(cadastroUsuario.jpeg);
+    background-image: url(https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;  
@@ -24,7 +24,7 @@ body {
 .card {
     background-color: #ffffff80;
     padding: 30px;
-    border-radius: 4%;
+    border-radius: 4% 0%;
     box-shadow: 3px 3px 1px 0px #00000070;
     width: 400px
 }
@@ -109,6 +109,7 @@ p {
 }
 
 .fa-eye {
+    fill: #407eaf;
     width: 15px;
     height: 15px;
     position: absolute;
@@ -118,6 +119,7 @@ p {
 }
 
 .fa-eye2 {
+    fill: #407eaf;
     width: 15px;
     height: 15px;
     position: absolute;
